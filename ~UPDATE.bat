@@ -1,5 +1,4 @@
 @echo off
-echo Thanks PTKickass for help with this updater!
 echo Deleting vgmstream...
 del vgmstream.exe
 del swresample-vgmstream-*.dll
