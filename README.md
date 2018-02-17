@@ -1,6 +1,6 @@
 # StreamTool
 
-These are a set of BAT file set up to help with converting game music from one format to another using [vgmstream](https://github.com/kode54/vgmstream), [vgaudio](https://github.com/Thealexbarney/VGAudio) and [ffmpeg](https://github.com/FFmpeg/FFmpeg).
+These are a set of BAT files set up to help with converting game audio from one format to another using [vgmstream](https://github.com/kode54/vgmstream), [vgaudio](https://github.com/Thealexbarney/VGAudio) and [ffmpeg](https://github.com/FFmpeg/FFmpeg).
 
 [Download the git repo](https://github.com/slashiee/StreamTool/archive/master.zip) and click on ~SETUP.bat to get started.
 
