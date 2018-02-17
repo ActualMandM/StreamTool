@@ -1,7 +1,2 @@
-vgmstream.exe
-
-vgaudio.exe
-
-bcfstmbcfwavconverter.exe
-
+*.exe
 *.dll
