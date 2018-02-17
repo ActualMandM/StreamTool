@@ -14,7 +14,7 @@ echo Extracting vgmstream...
 ren test.exe vgmstream.exe
 echo Extracting oggenc...
 7za x "oggenc.zip"
-ren oggenc.exe oggenc2.exe
+ren oggenc2.exe oggenc.exe
 echo Opening ffmpeg site...
 echo Download the nightly 32-bit shared version, and extract the contents of the bin folder into this directory.
 ffmpeg.url
@@ -24,6 +24,7 @@ if not exist mcinput mkdir mcinput
 if not exist mcoutput mkdir mcoutput
 echo Deleting unnecessary files...
 del vgmstream.zip
+del oggenc.zip
 del COPYING
 del README.md
 del in_vgmstream.dll
