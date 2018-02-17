@@ -31,5 +31,5 @@ del in_vgmstream.dll
 del xmp-vgmstream.dll
 del ffprobe.exe
 del ffmpeg.url
-del "~SETUP.bat"
 del README.md
+del "~SETUP.bat"
