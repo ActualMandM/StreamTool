@@ -30,12 +30,16 @@ powershell "($WebClient = New-Object System.Net.WebClient).DownloadFile('https:/
 echo Updating vgaudio...
 powershell "($WebClient = New-Object System.Net.WebClient).DownloadFile('https://ci.appveyor.com/api/projects/Thealexbarney/VGAudio/artifacts/VGAudioCli.exe', 'vgaudio.exe')"
 echo Updating BCFSTM-BCFWAV-Converter...
-powershell "($WebClient = New-Object System.Net.WebClient).DownloadFile('https://github.com/slashiee/BCFSTM-BCFWAV-Converter/releases/download/execompile/bcfstmbcfwavconverter.exe', 'bcfstmbcfwavconverter.exe')"
+powershell "($WebClient = New-Object System.Net.WebClient).DownloadFile('https://ci.appveyor.com/api/projects/slashiee/bcfstm-bcfwav-converter/artifacts/BCFSTM-BCFWAV-Converter.zip', 'bcfstmbcfwavconverter.zip')"
 echo Extracting vgmstream...
 7za x "vgmstream.zip"
 ren test.exe vgmstream.exe
+echo Extracting BCFSTM-BCFWAV-Converter...
+7za x "bcfstmbcfwavconverter.zip"
+ren main.exe bcfstmbcfwavconverter.exe
 echo Deleting unnecessary files...
 del vgmstream.zip
+del bcfstmbcfwavconverter.zip
 del COPYING
 del README.md
 del in_vgmstream.dll

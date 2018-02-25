@@ -4,7 +4,7 @@ powershell "($WebClient = New-Object System.Net.WebClient).DownloadFile('https:/
 echo Downloading vgaudio...
 powershell "($WebClient = New-Object System.Net.WebClient).DownloadFile('https://ci.appveyor.com/api/projects/Thealexbarney/VGAudio/artifacts/VGAudioCli.exe', 'vgaudio.exe')"
 echo Downloading BCFSTM-BCFWAV-Converter...
-powershell "($WebClient = New-Object System.Net.WebClient).DownloadFile('https://github.com/slashiee/BCFSTM-BCFWAV-Converter/releases/download/execompile/bcfstmbcfwavconverter.exe', 'bcfstmbcfwavconverter.exe')"
+powershell "($WebClient = New-Object System.Net.WebClient).DownloadFile('https://ci.appveyor.com/api/projects/slashiee/bcfstm-bcfwav-converter/artifacts/BCFSTM-BCFWAV-Converter.zip', 'bcfstmbcfwavconverter.zip')"
 echo Downloading 7zip...
 powershell "($WebClient = New-Object System.Net.WebClient).DownloadFile('https://github.com/PTKickass/ManiaModUpdater/blob/master/Dependencies/7z.exe?raw=true', '7za.exe')"
 echo Downloading oggenc...
@@ -15,6 +15,9 @@ ren test.exe vgmstream.exe
 echo Extracting oggenc...
 7za x "oggenc.zip" -y
 ren oggenc2.exe oggenc.exe
+echo Extracting BCFSTM-BCFWAV-Converter...
+7za x "bcfstmbcfwavconverter.zip"
+ren main.exe bcfstmbcfwavconverter.exe
 echo Opening ffmpeg site...
 echo Download the nightly 32-bit shared version, and extract the contents of the bin folder into this directory.
 ffmpeg.url
@@ -25,6 +28,7 @@ if not exist mcoutput mkdir mcoutput
 echo Deleting unnecessary files...
 del vgmstream.zip
 del oggenc.zip
+del bcfstmbcfwavconverter.zip
 del COPYING
 del README.md
 del in_vgmstream.dll
