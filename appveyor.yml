@@ -25,6 +25,6 @@ build_script:
   - del "~SETUP.bat"
   
 artifacts:
-    - path: "."
+    - path: "*"
       name: 'StreamTool_$(appveyor_build_version)'
       type: zip
