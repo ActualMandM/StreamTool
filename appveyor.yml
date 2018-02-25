@@ -1,0 +1,29 @@
+build_script:
+  - powershell "($WebClient = New-Object System.Net.WebClient).DownloadFile('https://ci.appveyor.com/api/projects/kode54/vgmstream/artifacts/Release/test.zip', 'vgmstream.zip')"
+  - powershell "($WebClient = New-Object System.Net.WebClient).DownloadFile('https://ci.appveyor.com/api/projects/Thealexbarney/VGAudio/artifacts/VGAudioCli.exe', 'vgaudio.exe')"
+  - powershell "($WebClient = New-Object System.Net.WebClient).DownloadFile('https://ci.appveyor.com/api/projects/slashiee/bcfstm-bcfwav-converter/artifacts/BCFSTM-BCFWAV-Converter.zip', 'bcfstmbcfwavconverter.zip')"
+  - powershell "($WebClient = New-Object System.Net.WebClient).DownloadFile('http://www.rarewares.org/files/ogg/oggenc2.88-1.3.5-generic.zip', 'oggenc.zip')"
+  - ren 7za 7za.exe
+  - 7za x "vgmstream.zip" -y
+  - ren test.exe vgmstream.exe
+  - 7za x "oggenc.zip" -y
+  - ren oggenc2.exe oggenc.exe
+  - 7za x "bcfstmbcfwavconverter.zip"
+  - ren main.exe bcfstmbcfwavconverter.exe
+  - if not exist mcinput mkdir mcinput
+  - if not exist mcoutput mkdir mcoutput
+  - del vgmstream.zip
+  - del oggenc.zip
+  - del bcfstmbcfwavconverter.zip
+  - del COPYING
+  - del README.md
+  - del in_vgmstream.dll
+  - del xmp-vgmstream.dll
+  - del ffprobe.exe
+  - del ffmpeg.url
+  - del README.md
+  - del "~SETUP.bat"
+  
+artifacts:
+    - name: 'StreamTool_$(appveyor_build_version)'
+      type: zip
