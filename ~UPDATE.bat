@@ -1,15 +1,17 @@
 @echo off
 echo Deleting vgmstream...
-del vgmstream.exe
-del swresample-vgmstream-*.dll
-del libvorbis.dll
-del libmpg123-*.dll
-del libg7221_decode.dll
-del libg719_decode.dll
-del libatrac9.dll
-del avutil-vgmstream-*.dll
-del avformat-vgmstream-*.dll
 del avcodec-vgmstream-*.dll
+del avformat-vgmstream-*.dll
+del avutil-vgmstream-*.dll
+del libatrac9.dll
+del libcelt-0061.dll
+del libcelt-0110.dll
+del libg719_decode.dll
+del libg7221_decode.dll
+del libmpg123-*.dll
+del libvorbis.dll
+del swresample-vgmstream-*.dll
+del vgmstream.exe
 REM echo Deleting ffmpeg...
 REM del avcodec-*.dll
 REM del avdevice-*.dll
@@ -31,9 +33,9 @@ echo Extracting vgmstream...
 7za x "vgmstream.zip"
 ren test.exe vgmstream.exe
 echo Deleting unnecessary files...
-del vgmstream.zip
 del COPYING
 del README.md
-del in_vgmstream.dll
-del xmp-vgmstream.dll
 REM del ffprobe.exe
+del in_vgmstream.dll
+del vgmstream.zip
+del xmp-vgmstream.dll

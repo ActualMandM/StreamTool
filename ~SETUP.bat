@@ -21,13 +21,13 @@ echo Making mass convert folders...
 if not exist mcinput mkdir mcinput
 if not exist mcoutput mkdir mcoutput
 echo Deleting unnecessary files...
-del vgmstream.zip
-del oggenc.zip
+del "appveyor.yml"
 del COPYING
 del README.md
-del in_vgmstream.dll
-del xmp-vgmstream.dll
-del ffprobe.exe
 del ffmpeg.url
-del "appveyor.yml"
+del ffprobe.exe
+del in_vgmstream.dll
+del oggenc.zip
+del vgmstream.zip
+del xmp-vgmstream.dll
 del "~SETUP.bat"
