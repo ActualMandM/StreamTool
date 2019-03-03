@@ -25,6 +25,7 @@ del "appveyor.yml"
 del COPYING
 del README.md
 del ffmpeg.url
+del ffplay.exe
 del ffprobe.exe
 del in_vgmstream.dll
 del oggenc.zip
