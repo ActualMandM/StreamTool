@@ -7,7 +7,6 @@ del libatrac9.dll
 del libcelt-0061.dll
 del libcelt-0110.dll
 del libg719_decode.dll
-del libg7221_decode.dll
 del libmpg123-*.dll
 del libvorbis.dll
 del swresample-vgmstream-*.dll
