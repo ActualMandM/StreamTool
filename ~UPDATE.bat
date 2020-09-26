@@ -30,7 +30,7 @@ powershell "($WebClient = New-Object System.Net.WebClient).DownloadFile('https:/
 echo Extracting vgmstream...
 7za x "vgmstream.zip"
 echo Updating ffmpeg...
-powershell "($WebClient = New-Object System.Net.WebClient).DownloadFile('https://ffmpeg.zeranoe.com/builds/win32/shared/ffmpeg-latest-win32-shared.zip', 'ffmpeg.zip')"
+powershell "($WebClient = New-Object System.Net.WebClient).DownloadFile('https://www.gyan.dev/ffmpeg/builds/ffmpeg-git-essentials.zip', 'ffmpeg.zip')"
 echo Extracting ffmpeg...
 7za e "ffmpeg.zip" -y
 ren test.exe vgmstream.exe
@@ -45,7 +45,6 @@ del ffmpeg.zip
 del xmp-vgmstream.dll
 rmdir bin
 rmdir doc
-rmdir ffmpeg-latest-win32-shared
 rmdir presets
 del LICENSE.txt
 del README.txt

@@ -6,7 +6,7 @@ powershell "($WebClient = New-Object System.Net.WebClient).DownloadFile('https:/
 echo Downloading oggenc...
 powershell "($WebClient = New-Object System.Net.WebClient).DownloadFile('http://www.rarewares.org/files/ogg/oggenc2.88-1.3.5-generic.zip', 'oggenc.zip')"
 echo Updating ffmpeg...
-powershell "($WebClient = New-Object System.Net.WebClient).DownloadFile('https://ffmpeg.zeranoe.com/builds/win32/shared/ffmpeg-latest-win32-shared.zip', 'ffmpeg.zip')"
+powershell "($WebClient = New-Object System.Net.WebClient).DownloadFile('https://www.gyan.dev/ffmpeg/builds/ffmpeg-git-essentials.zip', 'ffmpeg.zip')"
 echo Renaming 7zip...
 ren 7za 7za.exe
 echo Extracting vgmstream...
@@ -31,7 +31,6 @@ del vgmstream.zip
 del xmp-vgmstream.dll
 rmdir bin
 rmdir doc
-rmdir ffmpeg-latest-win32-shared
 rmdir presets
 del LICENSE.txt
 del README.txt
