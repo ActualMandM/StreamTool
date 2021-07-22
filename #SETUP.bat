@@ -1,12 +1,12 @@
 @echo off
 echo Downloading vgmstream...
-powershell "($WebClient = New-Object System.Net.WebClient).DownloadFile('https://ci.appveyor.com/api/projects/kode54/vgmstream/artifacts/Release/test.zip?branch=master&job=Image:+Visual+Studio+2017', 'vgmstream.zip')"
+powershell "($WebClient = New-Object System.Net.WebClient).DownloadFile('https://nightly.link/vgmstream/vgmstream/workflows/vs-win/master/test.zip', 'vgmstream.zip')"
 echo Downloading vgaudio...
-powershell "($WebClient = New-Object System.Net.WebClient).DownloadFile('https://ci.appveyor.com/api/projects/Thealexbarney/VGAudio/artifacts/VGAudioCli.exe?branch=master', 'vgaudio.exe')"
+powershell "($WebClient = New-Object System.Net.WebClient).DownloadFile('https://github.com/Thealexbarney/VGAudio/releases/download/v2.2.1/VGAudioCli.exe', 'vgaudio.exe')"
 echo Downloading oggenc...
 powershell "($WebClient = New-Object System.Net.WebClient).DownloadFile('http://www.rarewares.org/files/ogg/oggenc2.88-1.3.5-generic.zip', 'oggenc.zip')"
 echo Updating ffmpeg...
-powershell "($WebClient = New-Object System.Net.WebClient).DownloadFile('https://www.gyan.dev/ffmpeg/builds/ffmpeg-git-essentials.zip', 'ffmpeg.zip')"
+powershell "($WebClient = New-Object System.Net.WebClient).DownloadFile('https://www.gyan.dev/ffmpeg/builds/ffmpeg-git-essentials.7z', 'ffmpeg.7z')"
 echo Renaming 7zip...
 ren 7za 7za.exe
 echo Extracting vgmstream...
@@ -16,7 +16,7 @@ echo Extracting oggenc...
 7za x "oggenc.zip" -y
 ren oggenc2.exe oggenc.exe
 echo Extracting ffmpeg...
-7za e "ffmpeg.zip" -y
+7za e "ffmpeg.7z" -y
 echo Making mass convert folders...
 if not exist mcinput mkdir mcinput
 if not exist mcoutput mkdir mcoutput
@@ -28,6 +28,7 @@ del ffprobe.exe
 del in_vgmstream.dll
 del oggenc.zip
 del vgmstream.zip
+del ffmpeg.7z
 del xmp-vgmstream.dll
 rmdir bin
 rmdir doc

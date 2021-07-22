@@ -3,11 +3,13 @@ echo Deleting vgmstream...
 del avcodec-vgmstream-*.dll
 del avformat-vgmstream-*.dll
 del avutil-vgmstream-*.dll
+del jansson.dll
 del libatrac9.dll
 del libcelt-0061.dll
 del libcelt-0110.dll
 del libg719_decode.dll
 del libmpg123-*.dll
+del libspeex.dll
 del libvorbis.dll
 del swresample-vgmstream-*.dll
 del vgmstream.exe
@@ -24,15 +26,15 @@ del swscale-*.dll
 echo Deleting vgaudio...
 del vgaudio.exe
 echo Updating vgmstream...
-powershell "($WebClient = New-Object System.Net.WebClient).DownloadFile('https://ci.appveyor.com/api/projects/kode54/vgmstream/artifacts/Release/test.zip?branch=master&job=Image:+Visual+Studio+2017', 'vgmstream.zip')"
+powershell "($WebClient = New-Object System.Net.WebClient).DownloadFile('https://nightly.link/vgmstream/vgmstream/workflows/vs-win/master/test.zip', 'vgmstream.zip')"
 echo Updating vgaudio...
-powershell "($WebClient = New-Object System.Net.WebClient).DownloadFile('https://ci.appveyor.com/api/projects/Thealexbarney/VGAudio/artifacts/VGAudioCli.exe?branch=master', 'vgaudio.exe')"
+powershell "($WebClient = New-Object System.Net.WebClient).DownloadFile('https://github.com/Thealexbarney/VGAudio/releases/download/v2.2.1/VGAudioCli.exe', 'vgaudio.exe')"
 echo Extracting vgmstream...
 7za x "vgmstream.zip"
 echo Updating ffmpeg...
-powershell "($WebClient = New-Object System.Net.WebClient).DownloadFile('https://www.gyan.dev/ffmpeg/builds/ffmpeg-git-essentials.zip', 'ffmpeg.zip')"
+powershell "($WebClient = New-Object System.Net.WebClient).DownloadFile('https://www.gyan.dev/ffmpeg/builds/ffmpeg-git-essentials.7z', 'ffmpeg.7z')"
 echo Extracting ffmpeg...
-7za e "ffmpeg.zip" -y
+7za e "ffmpeg.7z" -y
 ren test.exe vgmstream.exe
 echo Deleting unnecessary files...
 del COPYING
@@ -41,7 +43,7 @@ del ffplay.exe
 del ffprobe.exe
 del in_vgmstream.dll
 del vgmstream.zip
-del ffmpeg.zip
+del ffmpeg.7z
 del xmp-vgmstream.dll
 rmdir bin
 rmdir doc
