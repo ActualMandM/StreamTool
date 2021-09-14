@@ -38,6 +38,7 @@ echo Extracting ffmpeg...
 ren test.exe vgmstream.exe
 echo Deleting unnecessary files...
 del COPYING
+del USAGE.md
 del README.md
 del ffplay.exe
 del ffprobe.exe

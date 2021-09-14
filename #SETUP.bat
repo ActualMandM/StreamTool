@@ -22,6 +22,7 @@ if not exist mcinput mkdir mcinput
 if not exist mcoutput mkdir mcoutput
 echo Deleting unnecessary files...
 del COPYING
+del USAGE.md
 del README.md
 del ffplay.exe
 del ffprobe.exe
