@@ -24,7 +24,6 @@ echo Deleting unnecessary files...
 del COPYING
 del USAGE.md
 del README.md
-del ffplay.exe
 del ffprobe.exe
 del in_vgmstream.dll
 del oggenc.zip

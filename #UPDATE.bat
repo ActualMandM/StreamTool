@@ -20,6 +20,7 @@ del avfilter-*.dll
 del avformat-*.dll
 del avutil-*.dll
 del ffmpeg.exe
+del ffplay.exe
 del postproc-*.dll
 del swresample-*.dll
 del swscale-*.dll
@@ -40,7 +41,6 @@ echo Deleting unnecessary files...
 del COPYING
 del USAGE.md
 del README.md
-del ffplay.exe
 del ffprobe.exe
 del in_vgmstream.dll
 del vgmstream.zip
