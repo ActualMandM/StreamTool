@@ -6,6 +6,6 @@ These are a set of BAT files set up to help with converting game audio from one 
 
 If you want to update most of the tools, run ~UPDATE.bat
 
-Thanks PTKickass for helping with the downloading portion of SETUP and UPDATE.
+Thanks PTKay for helping with the downloading portion of SETUP and UPDATE.
 
 To use a bat file, drag and drop a file supported by vgmstream onto one.
